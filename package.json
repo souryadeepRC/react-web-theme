@@ -1,0 +1,45 @@
+{
+  "name": "react-web-theme",
+  "version": "1.0.0",
+  "description": "React Web Theme is a simple and customizable component to handle theme in web applications",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npm run rollup",
+    "prepublishOnly": "npm version patch & npm run rollup",
+    "rollup": "rollup -c --bundleConfigAsCjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "web app",
+    "npm package",
+    "react web theme",
+    "Theme Provider",
+    "Theme Switch"
+  ],
+  "author": "Souryadeep Roy Chowdhury",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/souryadeepRC/react-web-theme.git"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/react": "^18.2.0",
+    "react": "^18.2.0",
+    "rollup": "^4.34.6",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tslib": "^2.8.1",
+    "typescript": "^5.7.3"
+  }
+}
