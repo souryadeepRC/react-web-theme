@@ -2,10 +2,20 @@
 
 React Web Theme is a simple and customizable component to handle theme in web applications created using React.
 
-## Implemented Technologies
+## Version
+![image](https://img.shields.io/npm/v/react-web-theme)
+![image](https://img.shields.io/npm/dm/react-web-theme)
+![image](https://img.shields.io/github/last-commit/souryadeepRC/react-web-theme
+)
 
+## Implemented Technologies
 ![image](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![image](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+
+## Compatible With
+- React >=16.8.0
+- Typescript
+
 
 ## Installation
 
@@ -46,7 +56,7 @@ AppTheme will consist any of these three value
 the selected theme value will be stored in local storage as well in the name of react-web-theme-value
 
 ```jsx
-(react - web - theme - value) | light;
+react-web-theme-value | light;
 ```
 
 Inside any child component you can call ThemeSwitch component with following parameters to get Theme changing Switch UI.
