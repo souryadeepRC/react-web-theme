@@ -1,7 +1,6 @@
-export interface ToggleSwitchProps {
-  appTheme: string;
+export interface ThemeSwitchProps {
   className?: string;
-  onChange: () => void;
+  onChange?: () => void;
 }
 export type AppTheme = "light" | "dark" | "default";
 

@@ -1,12 +1,18 @@
 import { APP_THEME } from "../../constants/theme-constants";
-import { ToggleSwitchProps } from "../../types";
-import "./ToggleSwitch.css";
+import { useTheme } from "../../context/ThemeContext";
+import { ThemeContextType, ThemeSwitchProps } from "../../types";
+import "./ThemeSwitch.css";
 
-const ToggleSwitch: React.FC<ToggleSwitchProps> = ({
-  appTheme,
+const ThemeSwitch: React.FC<ThemeSwitchProps> = ({
   className = "",
   onChange,
 }) => {
+  const { appTheme, toggleTheme }: ThemeContextType = useTheme();
+  const handleChange = (): void => {
+    toggleTheme();
+    onChange?.();
+  };
+
   const isChecked: boolean = appTheme === APP_THEME.DARK;
 
   return (
@@ -17,7 +23,7 @@ const ToggleSwitch: React.FC<ToggleSwitchProps> = ({
         <input
           className="Switch-input"
           type="checkbox"
-          onChange={onChange}
+          onChange={handleChange}
           checked={isChecked}
           aria-label="toggle switch"
         />
@@ -29,4 +35,4 @@ const ToggleSwitch: React.FC<ToggleSwitchProps> = ({
     </div>
   );
 };
-export default ToggleSwitch;
+export default ThemeSwitch;

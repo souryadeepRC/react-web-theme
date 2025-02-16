@@ -3,6 +3,7 @@
 React Web Theme is a simple and customizable component to handle theme in web applications created using React.
 
 ## Implemented Technologies
+
 ![image](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![image](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 
@@ -23,37 +24,47 @@ Import the ThemeProvider component and wrap your parent element with this:
 ```jsx
 return (
   <ThemeProvider>
-    <MainComponent />
+    <App />
   </ThemeProvider>
 );
 ```
 
-Inside any child component you can call useTheme method to get the latest selected theme name in appTheme variable
+Inside any child component you can call useAppTheme method to get the latest selected theme name in appTheme variable.
 
 ```jsx
-const { appTheme }: ThemeContextType = useTheme();
+const appTheme: AppTheme = useAppTheme();
 ```
 
-Inside any child component you can call useTheme method to get the theme alteration method reference.
+AppTheme will consist any of these three value
+
+### Possible values of App theme
+
+- light
+- dark
+- default
+
+the selected theme value will be stored in local storage as well in the name of react-web-theme-value
 
 ```jsx
-const { toggleTheme }: ThemeContextType = useTheme();
+(react - web - theme - value) | light;
 ```
 
-Inside any child component you can call ToggleSwitch component with following parameters to get Theme changing Switch UI.
+Inside any child component you can call ThemeSwitch component with following parameters to get Theme changing Switch UI.
 
 ```jsx
-<ToggleSwitch appTheme={appTheme} onChange={toggleTheme} />
+<ThemeSwitch />
 ```
 
-If you want to customize from default styles you can pass css class to parent HTML element and alter like below:
+- You can provide some customize onChange Function to the component which will get executed along with theme change.
 
 ```jsx
-<ToggleSwitch
-  className="custom_style"
-  appTheme={appTheme}
-  onChange={toggleTheme}
-/>
+<ToggleSwitch onChange={toggleTheme} />
+```
+
+- If you want to customize from default styles you can pass css class to parent HTML element and alter like below:
+
+```jsx
+<ToggleSwitch className="custom_style" onChange={toggleTheme} />
 ```
 
 ## Author

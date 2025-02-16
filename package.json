@@ -7,7 +7,10 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "npm run rollup",
-    "prepublishOnly": "npm version patch & npm run rollup",
+    "prepublishOnly": "npm run rollup",
+    "deploy:major": "npm version major && npm publish",
+    "deploy:minor": "npm version minor && npm publish",
+    "deploy:patch": "npm version patch && npm publish",
     "rollup": "rollup -c --bundleConfigAsCjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

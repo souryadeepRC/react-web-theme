@@ -5,3 +5,4 @@ export const APP_THEME: Record<string, AppTheme> = {
   DARK: "dark",
   DEFAULT: "default",
 };
+export const LOCAL_STORAGE_KEY: string = "react-web-theme-value";

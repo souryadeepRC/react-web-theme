@@ -1,6 +1,6 @@
-import ToggleSwitch from "./components/toggle-switch/ToggleSwitch";
-import { ThemeProvider, useTheme } from "./context/ThemeContext";
+import ThemeSwitch from "./components/theme-switch/ThemeSwitch";
+import { ThemeProvider, useAppTheme } from "./context/ThemeContext";
 import { ThemeContextType, AppTheme } from "./types";
 
-export { ToggleSwitch, ThemeProvider, useTheme };
+export { ThemeSwitch, ThemeProvider, useAppTheme };
 export type { ThemeContextType, AppTheme };
