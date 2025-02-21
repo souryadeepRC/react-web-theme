@@ -16,22 +16,24 @@ const ThemeSwitch: React.FC<ThemeSwitchProps> = ({
   const isChecked: boolean = appTheme === APP_THEME.DARK;
 
   return (
-    <div className={`Switch-root ${className}`}>
+    <div className={`theme_switch__root ${className}`}>
       <label
-        className={`Switch-switchBase ${isChecked ? "Switch-checked" : ""}`}
+        className={`theme_switch__base ${
+          isChecked ? "theme_switch__checked" : ""
+        }`}
       >
         <input
-          className="Switch-input"
+          className="theme_switch__input"
           type="checkbox"
           onChange={handleChange}
           checked={isChecked}
           aria-label="toggle switch"
         />
-        <span className="Switch-thumb">
-          <span>{isChecked ? <>&#9790;</> : <>&#9728;</>}</span>
+        <span className="theme_switch__thumb">
+          <>{isChecked ? <>&#127762;</> : <>&#9728;</>}</>
         </span>
       </label>
-      <span className="Switch-track"></span>
+      <span className="theme_switch__track"></span>
     </div>
   );
 };
