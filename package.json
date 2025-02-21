@@ -1,6 +1,6 @@
 {
   "name": "react-web-theme",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "React Web Theme is a simple and customizable component to handle theme in web applications",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
