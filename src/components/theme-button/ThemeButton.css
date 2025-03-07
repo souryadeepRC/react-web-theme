@@ -1,0 +1,29 @@
+.theme_button__root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 12px;
+    transition:
+      color,
+      background-color 0.3s ease-in;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    color: inherit;
+  }
+  .theme_button__root.light {
+    background-color: white;
+    color: black;
+  }
+  .theme_button__root.dark {
+    background-color: black;
+    color: white;
+  }
+  .theme_button__root .MuiSvgIcon-root {
+    width: inherit;
+    height: inherit;
+  }
+  
